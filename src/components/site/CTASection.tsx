@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { CalendarCheck, PhoneCall } from "lucide-react";
 
 export function CTASection({
-  title = "Schedule Your Free Technology Assessment",
+  title = "Schedule Your Free Assessment",
   subtitle = "A 30-minute conversation with a Maine-based advisor — no sales pressure, no jargon. Walk away with a clear picture of where your technology is helping (and where it's holding you back).",
 }: {
   title?: string;
@@ -18,12 +18,12 @@ export function CTASection({
             to="/schedule-assessment"
             className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
           >
-            <CalendarCheck className="h-4 w-4" /> Schedule a Free Technology Assessment
+            <CalendarCheck className="h-4 w-4" /> Free Assessment
           </Link>
 
           <a
             href="tel:2076922415"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
           >
             <PhoneCall className="h-4 w-4" /> Book a Discovery Call · 207-692-2415
           </a>
