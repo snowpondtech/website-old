@@ -179,12 +179,6 @@ function AdditionalIndustriesPage() {
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We help businesses implement practical technology solutions that reduce downtime, improve security, and support long-term growth — without unnecessary complexity or confusing technical jargon.
             </p>
-            <Link
-              to="/schedule-assessment"
-              className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
-            >
-              Free Assessment
-            </Link>
           </div>
         </div>
       </section>
@@ -263,22 +257,6 @@ function AdditionalIndustriesPage() {
             >
               Free Assessment
             </Link>
-            <div className="mt-6 border-t border-border pt-4 text-sm text-muted-foreground space-y-1">
-              <p className="font-semibold text-foreground">Snow Pond Technology Group</p>
-              <p>
-                <a href="tel:2076922415" className="text-brand font-medium">
-                  207-692-2415
-                </a>
-              </p>
-              <p>
-                <a href="mailto:info@snowpondtech.com" className="text-brand font-medium">
-                  info@snowpondtech.com
-                </a>
-              </p>
-              <p className="mt-3">
-                Serving businesses throughout Waterville, Augusta, Newport, Bangor, Lewiston-Auburn, Brunswick, Portland, Biddeford, and surrounding communities across Central and Southern Maine.
-              </p>
-            </div>
           </div>
         </div>
       </section>
