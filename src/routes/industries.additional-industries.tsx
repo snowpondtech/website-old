@@ -15,13 +15,13 @@ import additionalImage from "../assets/AdditionalIndustries.png.asset.json";
 export const Route = createFileRoute("/industries/additional-industries")({
   head: () => ({
     meta: [
-      { title: "Additional Industries We Serve | Snow Pond Tech" },
+      { title: "Additional Industries We Serve | Snow Pond Technology Group" },
       {
         name: "description",
         content:
           "Beyond contractors and manufacturers, Snow Pond Technology Group supports professional services firms, nonprofits, growing SMBs, multi-location organizations, and businesses navigating cyber insurance requirements across Maine.",
       },
-      { property: "og:title", content: "Additional Industries We Serve | Snow Pond Tech" },
+      { property: "og:title", content: "Additional Industries We Serve | Snow Pond Technology Group" },
       {
         property: "og:description",
         content:
@@ -276,7 +276,7 @@ function AdditionalIndustriesPage() {
                 </a>
               </p>
               <p className="mt-3">
-                Serving businesses throughout Waterville, Augusta, Newport, Bangor, Lewiston, Auburn, Brunswick, Portland, Biddeford, and surrounding communities across Central and Southern Maine.
+                Serving businesses throughout Waterville, Augusta, Newport, Bangor, Lewiston-Auburn, Brunswick, Portland, Biddeford, and surrounding communities across Central and Southern Maine.
               </p>
             </div>
           </div>

@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
-import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { LinkedInIcon } from "../components/site/SocialIcons";
 import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
+import badge365 from "@/assets/365-badge.png.asset.json";
+import midMaineChamber from "@/assets/midmaine-chamber-logo.png.asset.json";
+import kennebecValleyChamber from "@/assets/kennebec-valley-chamber-logo.png.asset.json";
+import asciiGroup from "@/assets/ascii-group-logo.png.asset.json";
+import nsitsp from "@/assets/nsitsp-logo.png.asset.json";
+import oaklandAerial from "@/assets/oakland-maine-aerial.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -27,22 +32,35 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const values = [
-  { icon: MapPin, title: "Local and rooted in Maine", body: "Oakland-based, working with businesses we can drive to. When you call, you talk to someone who knows the state, the seasons, and the way work gets done here." },
-  { icon: Handshake, title: "Long-term partnerships", body: "We aren't chasing logos. We take on a small number of clients and grow with them, learning their business inside and out." },
-  { icon: HeartHandshake, title: "Personalized service", body: "You get a dedicated advisor and a team that recognizes your voice. No ticket-number black holes, no overseas call centers." },
-  { icon: ShieldCheck, title: "Straight talk", body: "We won't sell you things you don't need. If a simpler answer solves the problem, that's what we'll recommend." },
-  { icon: Users, title: "Focused on your people", body: "Owners, office staff, shop floor, and field crews all use different tools in different conditions. Good IT works for all of them." },
-  { icon: Sparkles, title: "Built for growth", body: "We think two, three, five years ahead — so hiring, opening a new location, or taking on bigger jobs doesn't blow up the tech." },
+const affiliations = [
+  { name: "Mid-Maine Chamber of Commerce", url: "https://www.midmainechamber.com/", logo: midMaineChamber },
+  { name: "Kennebec Valley Chamber of Commerce", url: "https://kennebecvalleychamber.com/", logo: kennebecValleyChamber },
+  { name: "The ASCII Group", url: "https://www.ascii.com/", logo: asciiGroup },
+  { name: "National Society of IT Service Providers", url: "https://nsitsp.org/", logo: nsitsp },
+];
+
+const coreValues = [
+  { title: "Security First", body: "We prioritize the protection of our clients' businesses, data, and people in every recommendation we make." },
+  { title: "Integrity Without Compromise", body: "We do the right thing, communicate honestly, and stand behind our work." },
+  { title: "Proactive Service", body: "We prevent problems whenever possible rather than simply reacting when things break." },
+  { title: "Relationships Matter", body: "We build long-term partnerships based on trust, responsiveness, and genuine care for our clients' success." },
+  { title: "Lifelong Learning", body: "Technology constantly evolves. We continuously improve our knowledge, skills, and processes to better serve our clients." },
 ];
 
 function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Snow Pond Tech"
+        eyebrow="About Snow Pond Technology Group"
         title="A Maine technology partner that thinks like an owner"
         description="Snow Pond Technology Group is a locally owned company based in Oakland, Maine. We help contractors and manufacturers across Central and Southern Maine turn technology from a source of frustration into a competitive advantage."
+        media={
+          <img
+            src={oaklandAerial.url}
+            alt="Aerial view of downtown Oakland, Maine"
+            className="w-full max-w-xl rounded-2xl shadow-xl object-cover"
+          />
+        }
       />
 
       <section className="py-20 lg:py-24">
@@ -65,6 +83,17 @@ function AboutPage() {
               <p>
                 That's the role we play. Strategy, security, and steady day-to-day support — from a team that
                 genuinely cares about your success.
+              </p>
+            </div>
+            <div className="mt-8 flex items-center gap-5 rounded-2xl border border-border bg-card p-5">
+              <img
+                src={badge365.url}
+                alt="365 Small Business Circle Member, United Way Kennebec Valley"
+                className="h-28 w-28 shrink-0 object-contain"
+              />
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Snow Pond Technology Group is a proud member of the <span className="font-semibold text-foreground">365 Small Business Circle</span>,
+                giving back to our community in partnership with <span className="font-semibold text-foreground">United Way Kennebec Valley</span>.
               </p>
             </div>
           </div>
@@ -105,21 +134,71 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="py-20 lg:py-24">
+        <div className="container-page grid lg:grid-cols-2 gap-10">
+          <div className="rounded-2xl border border-border bg-card p-8 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Our Mission</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">Protect and empower Maine businesses</h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              To protect and empower Maine businesses through secure, reliable technology and trusted IT leadership.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Our Vision</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">The most trusted IT partner in Maine</h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              To become the most trusted IT and cybersecurity partner for small businesses throughout Maine.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 lg:py-24 bg-brand-soft/50 border-y border-border">
         <div className="container-page">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">What we stand for</p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-foreground">How we work with clients</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Our Core Values</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-foreground">What guides our work every day</h2>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {values.map((v) => (
+            {coreValues.map((v) => (
               <div key={v.title} className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand/10 text-brand">
-                  <v.icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">{v.title}</h3>
+                <h3 className="text-lg font-semibold text-foreground">{v.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24">
+        <div className="container-page">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Memberships & affiliations</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-foreground">
+              Connected to the communities and industries we serve
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              We're active members of the organizations that matter to Maine businesses and the IT profession — keeping us
+              plugged into local networks and national best practices.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+            {affiliations.map((a) => (
+              <a
+                key={a.name}
+                href={a.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-6 transition-colors hover:border-brand/40 hover:bg-brand-soft/40"
+              >
+                <img
+                  src={a.logo.url}
+                  alt={`${a.name} logo`}
+                  className="h-20 w-full object-contain"
+                  loading="lazy"
+                />
+                <span className="mt-4 text-center text-xs font-medium text-muted-foreground leading-snug">{a.name}</span>
+              </a>
             ))}
           </div>
         </div>

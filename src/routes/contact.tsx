@@ -36,28 +36,17 @@ function ContactPage() {
     <>
       <PageHero
         title="Contact Us"
-        description="Have a question? Need to reach our team? Use the form below for general inquiries and we'll get back to you as soon as possible. Looking for IT guidance, cybersecurity advice, or a technology review? Request a Free Assessment instead."
+        description={
+          <>
+            Have a question? Need to reach our team? Use the form below for general inquiries and we'll get back to you as soon as possible. Looking for IT guidance, cybersecurity advice, or a technology review? Request a{" "}
+            <Link to="/schedule-assessment" className="underline hover:text-white">
+              Free Assessment
+            </Link>{" "}
+            instead.
+          </>
+        }
       >
-        <div className="mt-8 flex flex-col sm:flex-row gap-3">
-          <Link
-            to="/schedule-assessment"
-            className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
-          >
-            Free Assessment
-          </Link>
-          <a
-            href="tel:2076922415"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
-          >
-            <Phone className="h-4 w-4" /> 207-692-2415
-          </a>
-          <a
-            href="mailto:info@snowpondtech.com"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
-          >
-            <Mail className="h-4 w-4" /> info@snowpondtech.com
-          </a>
-        </div>
+        <></>
       </PageHero>
 
       <section className="py-20 lg:py-24">
@@ -186,7 +175,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border overflow-hidden">
               <div className="aspect-[4/3] bg-brand-soft">
                 <iframe
-                  title="Snow Pond Tech office location"
+                  title="Snow Pond Technology Group office location"
                   className="w-full h-full"
                   loading="lazy"
                   src="https://www.google.com/maps?q=54+Main+St,+Ste+2B,+Oakland,+ME+04963&output=embed"
@@ -209,7 +198,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border bg-card p-6">
               <p className="font-semibold text-foreground">Service area</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Waterville · Augusta · Newport · Bangor · Lewiston · Auburn · Brunswick · Portland · Biddeford
+                Augusta · Waterville · Bangor · Lewiston-Auburn · Portland
               </p>
             </div>
           </div>

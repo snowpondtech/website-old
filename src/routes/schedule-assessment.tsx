@@ -2,14 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { Turnstile } from "../components/site/Turnstile";
-import { CheckCircle2, Mail, Phone } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 
 export const Route = createFileRoute("/schedule-assessment")({
   head: () => ({
     meta: [
-      { title: "Schedule a Free Technology Assessment | Snow Pond Tech" },
+      { title: "Schedule a Free Technology Assessment | Snow Pond Technology Group" },
       {
         name: "description",
         content:
@@ -46,20 +46,7 @@ function SchedulePage() {
           />
         }
       >
-        <div className="mt-8 flex flex-col sm:flex-row gap-3">
-          <a
-            href="tel:2076922415"
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
-          >
-            <Phone className="h-4 w-4" /> 207-692-2415
-          </a>
-          <a
-            href="mailto:info@snowpondtech.com"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
-          >
-            <Mail className="h-4 w-4" /> info@snowpondtech.com
-          </a>
-        </div>
+        <></>
       </PageHero>
 
       <section className="py-20 lg:py-24">

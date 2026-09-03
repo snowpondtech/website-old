@@ -3,24 +3,20 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon } from "./SocialIcons";
 
 const industries = [
-  ["hvac-contractors", "HVAC Contractors"],
   ["electrical-contractors", "Electrical Contractors"],
-  ["landscaping-contractors", "Landscaping Contractors"],
-  ["manufacturing", "Manufacturing"],
-  ["engineering-firms", "Engineering Firms"],
   ["general-contractors", "General Contractors"],
+  ["hvac-contractors", "HVAC Contractors"],
+  ["landscaping-contractors", "Landscaping Contractors"],
+  ["engineering-firms", "Engineering Firms"],
+  ["manufacturing", "Manufacturing"],
 ] as const;
 
 const locations = [
   ["augusta", "Augusta"],
   ["waterville", "Waterville"],
-  ["newport", "Newport"],
   ["bangor", "Bangor"],
-  ["lewiston", "Lewiston"],
-  ["auburn", "Auburn"],
-  ["brunswick", "Brunswick"],
+  ["lewiston-auburn", "Lewiston-Auburn"],
   ["portland", "Portland"],
-  ["biddeford", "Biddeford"],
 ] as const;
 
 export function SiteFooter() {
@@ -36,9 +32,14 @@ export function SiteFooter() {
             <a href="mailto:info@snowpondtech.com" className="flex items-center gap-2 hover:text-white">
               <Mail className="h-4 w-4" /> info@snowpondtech.com
             </a>
-            <p className="flex items-center gap-2 text-white/70">
+            <a
+              href="https://maps.app.goo.gl/NCfvNvNFQkLzEVcr6"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex items-center gap-2 text-white/70 hover:text-white"
+            >
               <MapPin className="h-4 w-4" /> Oakland, Maine
-            </p>
+            </a>
           </div>
           <div className="mt-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/60">Follow us</h4>
@@ -98,7 +99,7 @@ export function SiteFooter() {
 
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white/60">Service Area</h4>
-          <ul className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
+          <ul className="mt-4 space-y-2 text-sm">
             {locations.map(([slug, label]) => (
               <li key={slug}>
                 <Link to={`/locations/${slug}`} className="text-white/80 hover:text-white">
@@ -125,9 +126,18 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
+        <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Snow Pond Technology Group Inc. All rights reserved.</p>
-          <p>Oakland · Waterville · Augusta · Bangor · Portland · Lewiston</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            {["Augusta", "Waterville", "Bangor", "Lewiston-Auburn", "Portland"].map(
+              (city, i, arr) => (
+                <span key={city} className="inline-flex items-center gap-2">
+                  {city}
+                  {i < arr.length - 1 && <span className="text-white/40">·</span>}
+                </span>
+              )
+            )}
+          </div>
         </div>
       </div>
     </footer>

@@ -22,13 +22,9 @@ import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesBusinessCommunicationsRouteImport } from './routes/services.business-communications'
 import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
 import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
-import { Route as LocationsNewportRouteImport } from './routes/locations.newport'
-import { Route as LocationsLewistonRouteImport } from './routes/locations.lewiston'
-import { Route as LocationsBrunswickRouteImport } from './routes/locations.brunswick'
-import { Route as LocationsBiddefordRouteImport } from './routes/locations.biddeford'
+import { Route as LocationsLewistonAuburnRouteImport } from './routes/locations.lewiston-auburn'
 import { Route as LocationsBangorRouteImport } from './routes/locations.bangor'
 import { Route as LocationsAugustaRouteImport } from './routes/locations.augusta'
-import { Route as LocationsAuburnRouteImport } from './routes/locations.auburn'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries.manufacturing'
 import { Route as IndustriesLandscapingContractorsRouteImport } from './routes/industries.landscaping-contractors'
 import { Route as IndustriesHvacContractorsRouteImport } from './routes/industries.hvac-contractors'
@@ -103,24 +99,9 @@ const LocationsPortlandRoute = LocationsPortlandRouteImport.update({
   path: '/portland',
   getParentRoute: () => LocationsRoute,
 } as any)
-const LocationsNewportRoute = LocationsNewportRouteImport.update({
-  id: '/newport',
-  path: '/newport',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsLewistonRoute = LocationsLewistonRouteImport.update({
-  id: '/lewiston',
-  path: '/lewiston',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsBrunswickRoute = LocationsBrunswickRouteImport.update({
-  id: '/brunswick',
-  path: '/brunswick',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsBiddefordRoute = LocationsBiddefordRouteImport.update({
-  id: '/biddeford',
-  path: '/biddeford',
+const LocationsLewistonAuburnRoute = LocationsLewistonAuburnRouteImport.update({
+  id: '/lewiston-auburn',
+  path: '/lewiston-auburn',
   getParentRoute: () => LocationsRoute,
 } as any)
 const LocationsBangorRoute = LocationsBangorRouteImport.update({
@@ -131,11 +112,6 @@ const LocationsBangorRoute = LocationsBangorRouteImport.update({
 const LocationsAugustaRoute = LocationsAugustaRouteImport.update({
   id: '/augusta',
   path: '/augusta',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsAuburnRoute = LocationsAuburnRouteImport.update({
-  id: '/auburn',
-  path: '/auburn',
   getParentRoute: () => LocationsRoute,
 } as any)
 const IndustriesManufacturingRoute = IndustriesManufacturingRouteImport.update({
@@ -197,13 +173,9 @@ export interface FileRoutesByFullPath {
   '/industries/hvac-contractors': typeof IndustriesHvacContractorsRoute
   '/industries/landscaping-contractors': typeof IndustriesLandscapingContractorsRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
-  '/locations/auburn': typeof LocationsAuburnRoute
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
-  '/locations/biddeford': typeof LocationsBiddefordRoute
-  '/locations/brunswick': typeof LocationsBrunswickRoute
-  '/locations/lewiston': typeof LocationsLewistonRoute
-  '/locations/newport': typeof LocationsNewportRoute
+  '/locations/lewiston-auburn': typeof LocationsLewistonAuburnRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -225,13 +197,9 @@ export interface FileRoutesByTo {
   '/industries/hvac-contractors': typeof IndustriesHvacContractorsRoute
   '/industries/landscaping-contractors': typeof IndustriesLandscapingContractorsRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
-  '/locations/auburn': typeof LocationsAuburnRoute
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
-  '/locations/biddeford': typeof LocationsBiddefordRoute
-  '/locations/brunswick': typeof LocationsBrunswickRoute
-  '/locations/lewiston': typeof LocationsLewistonRoute
-  '/locations/newport': typeof LocationsNewportRoute
+  '/locations/lewiston-auburn': typeof LocationsLewistonAuburnRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -255,13 +223,9 @@ export interface FileRoutesById {
   '/industries/hvac-contractors': typeof IndustriesHvacContractorsRoute
   '/industries/landscaping-contractors': typeof IndustriesLandscapingContractorsRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
-  '/locations/auburn': typeof LocationsAuburnRoute
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
-  '/locations/biddeford': typeof LocationsBiddefordRoute
-  '/locations/brunswick': typeof LocationsBrunswickRoute
-  '/locations/lewiston': typeof LocationsLewistonRoute
-  '/locations/newport': typeof LocationsNewportRoute
+  '/locations/lewiston-auburn': typeof LocationsLewistonAuburnRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -286,13 +250,9 @@ export interface FileRouteTypes {
     | '/industries/hvac-contractors'
     | '/industries/landscaping-contractors'
     | '/industries/manufacturing'
-    | '/locations/auburn'
     | '/locations/augusta'
     | '/locations/bangor'
-    | '/locations/biddeford'
-    | '/locations/brunswick'
-    | '/locations/lewiston'
-    | '/locations/newport'
+    | '/locations/lewiston-auburn'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -314,13 +274,9 @@ export interface FileRouteTypes {
     | '/industries/hvac-contractors'
     | '/industries/landscaping-contractors'
     | '/industries/manufacturing'
-    | '/locations/auburn'
     | '/locations/augusta'
     | '/locations/bangor'
-    | '/locations/biddeford'
-    | '/locations/brunswick'
-    | '/locations/lewiston'
-    | '/locations/newport'
+    | '/locations/lewiston-auburn'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -343,13 +299,9 @@ export interface FileRouteTypes {
     | '/industries/hvac-contractors'
     | '/industries/landscaping-contractors'
     | '/industries/manufacturing'
-    | '/locations/auburn'
     | '/locations/augusta'
     | '/locations/bangor'
-    | '/locations/biddeford'
-    | '/locations/brunswick'
-    | '/locations/lewiston'
-    | '/locations/newport'
+    | '/locations/lewiston-auburn'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -461,32 +413,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsPortlandRouteImport
       parentRoute: typeof LocationsRoute
     }
-    '/locations/newport': {
-      id: '/locations/newport'
-      path: '/newport'
-      fullPath: '/locations/newport'
-      preLoaderRoute: typeof LocationsNewportRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/lewiston': {
-      id: '/locations/lewiston'
-      path: '/lewiston'
-      fullPath: '/locations/lewiston'
-      preLoaderRoute: typeof LocationsLewistonRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/brunswick': {
-      id: '/locations/brunswick'
-      path: '/brunswick'
-      fullPath: '/locations/brunswick'
-      preLoaderRoute: typeof LocationsBrunswickRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/biddeford': {
-      id: '/locations/biddeford'
-      path: '/biddeford'
-      fullPath: '/locations/biddeford'
-      preLoaderRoute: typeof LocationsBiddefordRouteImport
+    '/locations/lewiston-auburn': {
+      id: '/locations/lewiston-auburn'
+      path: '/lewiston-auburn'
+      fullPath: '/locations/lewiston-auburn'
+      preLoaderRoute: typeof LocationsLewistonAuburnRouteImport
       parentRoute: typeof LocationsRoute
     }
     '/locations/bangor': {
@@ -501,13 +432,6 @@ declare module '@tanstack/react-router' {
       path: '/augusta'
       fullPath: '/locations/augusta'
       preLoaderRoute: typeof LocationsAugustaRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/auburn': {
-      id: '/locations/auburn'
-      path: '/auburn'
-      fullPath: '/locations/auburn'
-      preLoaderRoute: typeof LocationsAuburnRouteImport
       parentRoute: typeof LocationsRoute
     }
     '/industries/manufacturing': {
@@ -587,25 +511,17 @@ const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
 )
 
 interface LocationsRouteChildren {
-  LocationsAuburnRoute: typeof LocationsAuburnRoute
   LocationsAugustaRoute: typeof LocationsAugustaRoute
   LocationsBangorRoute: typeof LocationsBangorRoute
-  LocationsBiddefordRoute: typeof LocationsBiddefordRoute
-  LocationsBrunswickRoute: typeof LocationsBrunswickRoute
-  LocationsLewistonRoute: typeof LocationsLewistonRoute
-  LocationsNewportRoute: typeof LocationsNewportRoute
+  LocationsLewistonAuburnRoute: typeof LocationsLewistonAuburnRoute
   LocationsPortlandRoute: typeof LocationsPortlandRoute
   LocationsWatervilleRoute: typeof LocationsWatervilleRoute
 }
 
 const LocationsRouteChildren: LocationsRouteChildren = {
-  LocationsAuburnRoute: LocationsAuburnRoute,
   LocationsAugustaRoute: LocationsAugustaRoute,
   LocationsBangorRoute: LocationsBangorRoute,
-  LocationsBiddefordRoute: LocationsBiddefordRoute,
-  LocationsBrunswickRoute: LocationsBrunswickRoute,
-  LocationsLewistonRoute: LocationsLewistonRoute,
-  LocationsNewportRoute: LocationsNewportRoute,
+  LocationsLewistonAuburnRoute: LocationsLewistonAuburnRoute,
   LocationsPortlandRoute: LocationsPortlandRoute,
   LocationsWatervilleRoute: LocationsWatervilleRoute,
 }
